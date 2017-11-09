@@ -1,11 +1,15 @@
-M O R S E  T R A N S L A T O R
+#M O R S E  T R A N S L A T O R
 
-translate morse into english and vice versa
-morse 'letters' should be separated by single spaces, words - with `|`
+Translate morse into english and vice versa.
+Morse 'letters' should be separated by single spaces, words - with `|`.
+
 e.g.
 
-"sos help": ... --- ... | .... . .-.. .--.
+```
+"... --- ... | .... . .-.. .--."  ->>  "sos help"
+```
 
+To run locally:
 
 ```
 git clone ...
