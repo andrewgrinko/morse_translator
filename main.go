@@ -40,15 +40,16 @@ func main() {
 	isFromMorse := true
 
 	if isFromMorse {
-		fmt.Println(fromMorse(message))
+		fmt.Println(FromMorse(message))
 	}
 
 	if isToMorse {
-		fmt.Println(toMorse(message))
+		fmt.Println(ToMorse(message))
 	}
 }
 
-func toMorse(s string) (result string) {
+// ToMorse translates to morse
+func ToMorse(s string) (result string) {
 	letters := strings.Split(s, "")
 
 	for _, v := range letters {
@@ -60,10 +61,13 @@ func toMorse(s string) (result string) {
 		}
 	}
 
+	result = strings.TrimSpace(result)
+
 	return
 }
 
-func fromMorse(s string) (result string) {
+// FromMorse translates from morse
+func FromMorse(s string) (result string) {
 	words := strings.Split(s, "|")
 
 	for _, word := range words {
@@ -81,6 +85,8 @@ func fromMorse(s string) (result string) {
 		result += decodedWord
 		result += " "
 	}
+
+	result = strings.TrimSpace(result)
 
 	return
 }
