@@ -1,4 +1,4 @@
-#M O R S E  T R A N S L A T O R
+# M O R S E  T R A N S L A T O R
 
 Translate morse into english and vice versa.
 Morse 'letters' should be separated by single spaces, words - with `|`.
