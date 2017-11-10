@@ -5,6 +5,7 @@ import (
 	"html/template"
 	"log"
 	"net/http"
+	"path/filepath"
 	"regexp"
 	"strings"
 )
@@ -67,7 +68,8 @@ func FromMorse(s string) (result string) {
 
 func sendTemplate(w http.ResponseWriter, r *http.Request, d *Decoded) {
 	t := template.New("index")
-	t, err := t.ParseFiles("index.html")
+	templatePath, _ := filepath.Abs("index.html")
+	t, err := t.ParseFiles(templatePath)
 	if err != nil {
 		fmt.Printf("Error while parsing template: %v", err)
 	}
